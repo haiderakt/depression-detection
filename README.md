@@ -1,15 +1,21 @@
-# Depression Detection from Audio
+# Depression Detection System
 
-This project uses deep learning to detect signs of depression from audio recordings. It extracts MFCCs, delta, and delta-delta features using Librosa, then classifies them using a fine-tuned BiLSTM model built with TensorFlow.
+This project predicts depression using both audio signals and facial expressions from video input. It combines a BiLSTM-based model for audio (MFCC + delta + delta-delta features) and a DenseNet201-based model for facial emotion detection from video frames.
 
 ## Features
+- 🎙️ Audio analysis using MFCC + delta features (78-dim total)
+- 🎥 Facial emotion detection via DenseNet201
+- 🤝 Late fusion of audio and video models for better prediction
+- 🧠 Supports fine-tuning and ensemble learning
+- 📦 Gradio interface available for quick testing
 
-- 📁 Processes `.wav` files
-- 🧠 Extracts 78 audio features (MFCC + delta + delta-delta)
-- 🔄 StandardScaler normalization
-- 🎙️ Optionally supports speaker diarization for multi-speaker files
-- 🔮 Predicts depression using a trained BiLSTM model
-- 🌐 Gradio interface for easy browser-based testing
+## Requirements
+
+Install dependencies with:
+
+```bash
+pip install -r requirements.txt
+
 
 ## Setup
 
